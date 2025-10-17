@@ -334,10 +334,22 @@ function CharacterTile({
         React.createElement(
           'div',
           {
-            className: 'absolute top-1 left-1 flex gap-0.5 flex-wrap max-w-[60%]'
+            className: 'absolute left-1 right-1 whitespace-nowrap overflow-hidden pointer-events-none',
+            style: {
+              bottom: bannerHeight + 2, // sit just above the banner
+              zIndex: 5
+            }
           },
-          character.symbols.slice(0, 4).map((symbol, i) =>
-            React.createElement('span', { key: i, className: 'text-sm' }, symbol)
+          character.symbols.map((symbol, i) =>
+            React.createElement(
+              'span',
+              {
+                key: i,
+                className: 'text-base align-middle select-none',
+                style: { marginLeft: i === 0 ? 0 : -6 } // overlap slightly to keep to one row
+              },
+              symbol
+            )
           )
         )
     )
@@ -1225,6 +1237,34 @@ function EditPanel({
     }
     setData({ ...data, legend: newLegend });
   };
+
+  // --- Ensure characters don't reference removed/replaced legend symbols ---
+  const sanitizeCharactersFromLegend = () => {
+    const symSet = new Set(Object.keys(data.legend?.symbols || {}));
+    const statusSet = new Set(Object.keys(data.legend?.statusSymbols || {}));
+    let changed = false;
+
+    const cleaned = data.characters.map((c) => {
+      const oldSyms = Array.isArray(c.symbols) ? c.symbols : [];
+      const newSyms = oldSyms.filter((s) => symSet.has(s));
+      const newStatus = statusSet.has(c.statusSymbol) ? c.statusSymbol : '';
+      if (newSyms.length !== oldSyms.length || newStatus !== c.statusSymbol) {
+        changed = true;
+        return { ...c, symbols: newSyms, statusSymbol: newStatus };
+      }
+      return c;
+    });
+
+    if (changed) {
+      setData({ ...data, characters: cleaned });
+    }
+  };
+
+  // Run sanitization whenever the legend changes (covers import, delete, replace)
+  useEffect(() => {
+    sanitizeCharactersFromLegend();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.legend]);
 
   const exportData = () => {
     const dataStr = JSON.stringify(data, null, 2);
