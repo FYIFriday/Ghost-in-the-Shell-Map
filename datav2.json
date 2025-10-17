@@ -1,0 +1,225 @@
+{
+  "canvasWidth": 50,
+  "canvasHeight": 40,
+  "characters": [
+    {
+      "imagePosition": "center",
+      "id": "1",
+      "name": "Motoko Kusanagi",
+      "pronunciation": "",
+      "titles": [
+        "The Major"
+      ],
+      "nicknames": [
+        "MOTOKOOOOOOOO!"
+      ],
+      "gridX": 10,
+      "gridY": 10,
+      "image": "https://davedalessiowrites.wordpress.com/wp-content/uploads/2019/03/motoko-kusunagi.jpg",
+      "symbols": [
+        "💣",
+        "🎖",
+        "💪",
+        "🫥",
+        "💭",
+        "👓",
+        "🤔",
+        "⚔️"
+      ],
+      "statusSymbol": "🤖",
+      "bio": "Major Motoko Kusanagi, or just \"The Major\", is the main protagonist in Masamune Shirow's Ghost in the Shell manga and anime series. She is a cybernetic human, augmented with a synthetic \"full-body prosthesis\".",
+      "sect": "gusulan"
+    },
+    {
+      "imagePosition": "top",
+      "id": "2",
+      "name": "Batou",
+      "pronunciation": "Bhat-oh",
+      "titles": [
+        "Sergeant"
+      ],
+      "nicknames": [
+        "The Ranger"
+      ],
+      "gridX": 25,
+      "gridY": 10,
+      "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Ghost_in_the_Shell_Stand_Alone_Complex_Batou.png",
+      "symbols": [
+        "⚔️",
+        "🎯",
+        "💣",
+        "💪",
+        "👓",
+        "✨",
+        "🤝"
+      ],
+      "statusSymbol": "🤖",
+      "bio": "He is a battle-hardened cyborg special operative with a long distinguished military career and a no-nonsense attitude. Though he looks imposing, he is known for his warm heart, sense of humor, and love for animals.",
+      "sect": "gusulan"
+    }
+  ],
+  "connections": [
+    {
+      "id": "c1",
+      "from": "1",
+      "to": "2",
+      "type": "love",
+      "startSide": "right",
+      "endSide": "left",
+      "waypoints": []
+    }
+  ],
+  "legend": {
+    "lines": {
+      "love": {
+        "color": "#003399",
+        "style": "solid",
+        "thickness": 6,
+        "label": "Direct Command"
+      },
+      "family": {
+        "color": "#3366cc",
+        "style": "solid",
+        "thickness": 3,
+        "label": "Indirect Command"
+      },
+      "rivalry": {
+        "color": "#6698ff",
+        "style": "dashed",
+        "thickness": 2,
+        "label": "Advisory / Counsulting"
+      },
+      "friendship": {
+        "color": "#6698ff",
+        "style": "dotted",
+        "thickness": 2,
+        "label": "Loyalty / Allegiance"
+      },
+      "mentor": {
+        "color": "#ff3399",
+        "style": "solid",
+        "thickness": 2,
+        "label": "Unrequited Love"
+      },
+      "line_1760660450152": {
+        "color": "#606060",
+        "style": "solid",
+        "thickness": 2,
+        "label": "Teammates"
+      },
+      "line_1760660451073": {
+        "color": "#606060",
+        "style": "dotted",
+        "thickness": 2,
+        "label": "Mentor / Mentee"
+      },
+      "line_1760666721867": {
+        "color": "#22d3ee",
+        "style": "solid",
+        "thickness": 2,
+        "label": "New Line"
+      }
+    },
+    "symbols": {
+      "⚔️": "Elite Combatant ",
+      "🎯": "Sniper Specialist",
+      "💣": "Heavy Weapons Expert",
+      "🎖": "Tactical Commander ",
+      "🕵": "Covert Operative",
+      "💻": "Elite Hacker",
+      "👁": "Ghost Hacker ",
+      "📊": "Intelligence Analyst",
+      "📡": "Signals Intelligence (SIGINT)",
+      "💭": "AI Specialist",
+      "💪": "Superhuman Strength",
+      "🫥": "Thermoptic Camouflage User",
+      "👓": "Enhanced Vision",
+      "🤔": "Philosophical Thinker ",
+      "✨": "Idealist",
+      "⚖️": "Pragmatist ",
+      "🤝": "Loyal/Team Player ",
+      "🦅": "Maverick/Independent ",
+      "😈": "Manipulator "
+    },
+    "statusSymbols": {
+      "🦾": "Partial Cyborg (Heavy Augmentation)",
+      "🤖": "Full Cyborg (Full-Body Prosthetic)",
+      "🧠": "Cyber-Brain Only",
+      "🦿": "Cyberization with Prosthetic Limbs",
+      "👤": "Fully Human (No Augmentation) ",
+      "🌐": "AI/Artificial Intelligence",
+      "👻": "Ghost-Dubbed / Copied",
+      "🎭": "Android / Gynoid"
+    },
+    "sects": {
+      "gusulan": {
+        "name": "Section 9",
+        "color": "#5c00cc"
+      },
+      "yunmeng": {
+        "name": "Section 6",
+        "color": "#b30000"
+      },
+      "qinghe": {
+        "name": "Japanese Self-Defense Forces (JSDF)",
+        "color": "#168d42"
+      },
+      "lanling": {
+        "name": "Police/Law Enforcement",
+        "color": "#006eff"
+      },
+      "qishan": {
+        "name": "Japanese Government/Cabinet",
+        "color": "#ffd22e"
+      },
+      "sect_1760660458751": {
+        "name": "Cabinet Intelligence Service",
+        "color": "#eda302"
+      },
+      "sect_1760660460124": {
+        "name": "The Laughing Man",
+        "color": "#00e6d6"
+      },
+      "sect_1760661614434": {
+        "name": "Individual Eleven ",
+        "color": "#c800d6"
+      },
+      "sect_1760661638320": {
+        "name": "Various Yakuza/Criminal Syndicates",
+        "color": "#f29664"
+      },
+      "sect_1760661653052": {
+        "name": "Serano Genomics ",
+        "color": "#6366f1"
+      },
+      "sect_1760661655787": {
+        "name": "Various Zaibatsu/Corporations",
+        "color": "#bf94ff"
+      },
+      "sect_1760661673687": {
+        "name": "Asian Refugees",
+        "color": "#64f28f"
+      },
+      "sect_1760661694277": {
+        "name": "Invited Intelligence Agents",
+        "color": "#d3f264"
+      },
+      "sect_1760661707083": {
+        "name": "American Empire",
+        "color": "#fffdb8"
+      },
+      "sect_1760661724166": {
+        "name": "Chinese/Asian Powers",
+        "color": "#fdaaaa"
+      },
+      "sect_1760661747019": {
+        "name": "Net Divers/Hackers",
+        "color": "#b8b8b8"
+      },
+      "sect_1760661783818": {
+        "name": "Prosthetic/Cyborg Communities",
+        "color": "#ffffff"
+      }
+    }
+  }
+}

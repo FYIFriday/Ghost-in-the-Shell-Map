@@ -1350,10 +1350,10 @@ function EditPanel({
         'Path:',
         React.createElement('input', {
           type: 'text',
-          value: publishCfg.path || 'data.json',
+          value: publishCfg.path || 'datav2.json',
           onChange: (e) => savePublishCfg({ ...publishCfg, path: e.target.value }),
           className: 'w-full mt-1 p-2 bg-gray-700 rounded',
-          placeholder: 'data.json'
+          placeholder: 'datav2.json'
         })
       )
     ),
